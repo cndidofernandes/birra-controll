@@ -6,12 +6,9 @@ import BoxQuestion from './view/components/BoxQuestion';
 import BoxQuestion2 from './view/components/BoxQuestion2';
 import AccountTab from './view/components/AccountTab';
 import { maskTotal } from './util';
-import SplashScreen from './SplashScreen';
 
 function App() {
   const theme = useTheme();
-
-  const [isFirstTime, setIsFirstTime] = useState(true);
 
   const [form1, setForm1] = useState({
     numOfProductsToManage: 1,
@@ -41,11 +38,6 @@ function App() {
     })
 
     setTotalMoneyPay([])
-  }
-
-  if (isFirstTime) {
-    
-    return <SplashScreen setIsFirstTime={setIsFirstTime}/>
   }
 
 
